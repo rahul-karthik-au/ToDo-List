@@ -1,13 +1,12 @@
-import AddTask from "./AddTask";
 import './App.css';
-import Header from "./Header";
+import Home from "./layouts/Home";
+import { TaskContextProvider } from "./context/TaskContext";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <AddTask />
-    </div>
+    <TaskContextProvider>
+      <Home />
+    </TaskContextProvider>
   );
 }
 
